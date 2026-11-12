@@ -1,0 +1,34 @@
+# API (Application Programming Interface):
+    An API is a software intermediary that allows two or more applications to talk to each other.
+
+    API Type in terms of Release Policies :-
+    . Private - It can be used within the organization.
+    . Partner - It can be used within Business Partners.
+    . Public - It can be used by any third party Developers.
+
+    Application --------> Google maps API -------> Google maps
+    (Consumer)                                     (Provider)
+
+
+# Web API:
+    An API which is interface for web is called as Web API.
+    It may consist of one or more endpoints to define request and response.
+
+    How Web API works?
+        Mobile App -------------> Web API ----------> Web Application <---------> Database
+                <-------------        <-----------
+        
+        . Client makes HTTP Request to API
+        . API will communicate to Web Application/Database (If needed)
+        . Web Application/Database provides required data to API
+        . API returns Data to Client
+
+        Note - Json Data, XML Data
+    
+    How to use Web API?
+        . Register/Sign-up to API
+        . API may provide API Key for Authentication purpose
+            API Key/Token: 23423jkhjhgh32434hjgjh4343
+        . Whenever you need to communicate with server make Request to API with API Key
+            http://geekyshows.com/?key=23423jkhjhgh32434hjgjh4343
+        . If API Key authentication succeed, API will provide required Data

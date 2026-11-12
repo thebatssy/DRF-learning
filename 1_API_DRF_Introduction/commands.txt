@@ -1,0 +1,53 @@
+# Virtual Environment & Packages:
+    virtualenv VENVNAME                          # Create virtual environment
+    VENVNAME\Scripts\activate                    # Activate virtual environment (Windows)
+    deactivate                                   # Deactivate virtual environment
+    pip freeze                                   # List installed packages
+    pip freeze > requirements.txt               # Save installed packages
+    pip install -r requirements.txt             # Install packages from requirements.txt
+    pip install django                           # Install Django
+    pip install djangorestframework              # Install DRF
+    pip uninstall PACKAGE                       # Uninstall package
+    pip show django                              # Show package details
+
+# Django Project & App:
+    django-admin startproject PROJECTNAME .      # Create Django project
+    python manage.py startapp APPNAME            # Create Django app
+    python manage.py runserver                   # Start development server
+    python manage.py runserver 8080              # Start server on port 8080
+    python manage.py check                       # Check project for common issues
+
+# Database & Migrations:
+    python manage.py makemigrations              # Create migration files
+    python manage.py migrate                     # Apply migrations
+    python manage.py showmigrations              # Show migration status
+    python manage.py sqlmigrate APPNAME 0001     # Show SQL for a migration
+    python manage.py migrate APPNAME zero        # Reverse all migrations of an app
+    python manage.py flush                       # Delete all database data
+
+# Admin & Database Shell:
+    python manage.py createsuperuser             # Create admin user
+    python manage.py changepassword USERNAME     # Change user password
+    python manage.py shell                       # Open Django interactive shell
+    python manage.py dbshell                     # Open database shell
+
+# Django REST Framework:
+    pip install djangorestframework              # Install Django REST Framework
+    pip install djangorestframework-simplejwt    # Install SimpleJWT
+    pip install django-filter                    # Install django-filter
+
+# Useful Python Commands:
+    python --version                             # Check Python version
+    python -m pip --version                      # Check pip version
+    python -m pip install --upgrade pip          # Upgrade pip
+    where python                                 # Find Python executable (Windows)
+
+# Git Commands (Useful for Django Projects):
+    git init                                     # Initialize Git repository
+    git status                                   # Check repository status
+    git add .                                    # Stage all changes
+    git commit -m "message"                      # Commit changes
+    git pull origin main                         # Fetch and merge remote changes
+    git push origin main                         # Push changes to GitHub
+
+# A useful shortcut:    python manage.py makemigrations && python manage.py migrate

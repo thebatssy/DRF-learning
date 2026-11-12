@@ -1,0 +1,32 @@
+# REST:
+    Its not a framework, language or library but an architectural guidline to develop Web API.
+    
+# REST API
+    The API which is developed using REST is known as REST API / RESTful API.
+
+    CRUD Operations: 
+        Operation       HTTP Methods        Description
+        Create             POST             Creating/Posting/Inserting Data
+        Read               GET              Reading/Getting/Retrieving Data
+        Update             PUT, PATCH       Complete Update - PUT; Partial Update - PATCH
+        Delete             DELETE           Deleting Data
+
+    Structure:
+        http://geekyshows.com/api/students
+                |       |    |
+                1       2    3
+        1 => Base URL
+        2 => Naming Convention
+        3 => Resource of API or End-Point
+
+    Example:
+        http://geekyshows.com/api/students
+
+        GET         /api/students
+        GET         /api/students/1
+        POST        /api/students
+        PUT         /api/students/1
+        PATCH       /api/students/1
+        DELETE      /api/students/1
+
+
