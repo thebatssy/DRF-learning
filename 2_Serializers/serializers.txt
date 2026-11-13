@@ -1,0 +1,32 @@
+#) Serializers:
+    In Django REST Framework, serializers are responsible for converting complex data such as querysets and model instances to native Python datatypes 
+    (called serialization) that can then be easily rendered into JSON, XML or other content types which is understandable by Front End.
+
+    Serializers are also responsible for deserialization which means it allows parsed data to be converted back into complex types, after first 
+    validating the incoming data.
+
+    · Serialization
+    · Deserialization
+
+#) Serializer Class:
+    A serializer class is very similar to a Django Form and ModelForm class, and includes similar validation flags on the various fields, such as required, 
+    max_length and default.
+
+    DRF provides a Serializer class which gives you a powerful, generic way to control the output of your responses, as well as a ModelSerializer class 
+    which provides a useful shortcut for creating serializers that deal with model instances and querysets.
+
+    Create Serializer Class:
+    · Create a separate seriealizers.py file to write all serializers
+
+        from rest_framework import serializers
+
+        class StudentSerializer(serializers.Serializer):
+            name = serializers.CharField(max_length=100)
+            roll = serializers.IntegerField()
+            city = serializers.CharField(max_length=100)
+
+    Flow:
+    Complex DataType ---------------> Python Native DataType -----------> JSON Data
+                      Serialization                           Rendering 
+
+
