@@ -1,0 +1,20 @@
+# HyperlinkedModelSerializer:
+The HyperlinkedModelSerializer class is similar to the ModelSerializer class, except that it uses hyperlinks to represent relationships instead of primary keys.
+
+The HyperlinkedModelSerializer class is the same as a regular ModelSerializer class, except that:
+. It does not include the id field by default.
+. It includes a url field that represents the object using a hyperlink.
+. Relationships are represented using hyperlinks instead of primary keys.
+
+Note: HyperlinkedModelSerializer generally requires the request context to generate proper URLs.
+
+Create HyperlinkedModelSerializer Class:
+· Create a separate serializers.py file to write all serializers
+
+    from rest_framework import serializers
+    from .models import Student
+
+    class StudentSerializer(serializers.HyperlinkedModelSerializer):
+        class Meta:
+            model = Student
+            fields = ['url', 'name', 'roll', 'city']
