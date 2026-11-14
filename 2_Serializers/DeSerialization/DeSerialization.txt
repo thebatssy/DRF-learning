@@ -1,0 +1,34 @@
+# DeSerialization:
+    Serializers are also responsible for deserialization which means it allows
+    parsed data to be converted back into complex types, after first validating the
+    incoming data.
+
+    Flow:
+        JSON Data -----------> Python Native DataType -----------------> Complex DataType
+                    Parsing                            DeSerialization 
+
+    
+    Deserialization allows parsed data to be converted back into complex types,
+    after first validating the incoming data.
+
+    . Creating Serializer Object
+        serializer = StudentSerializer(data = parsed_data)
+
+    . Validated Data
+        serializer.is_valid()
+
+    This is the Valid data : serializer.validated_data
+    This is the errors : serializer.errors
+
+# BytesIO():
+    A stream implementation using an in-memory bytes buffer. It inherits
+    BufferedIOBase. The buffer is discarded when the close() method is called.
+    
+    import io
+    stream = io.BytesIO(json_data)
+
+# JSONParser():
+    This is used to parse json data to python native data type.
+    
+    from rest_framework.parsers import JSONParser
+    parsed_data = JSONParser().parse(stream)
